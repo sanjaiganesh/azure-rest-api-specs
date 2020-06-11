@@ -1,0 +1,25 @@
+trigger:
+- sanjaiga/datacontainerpipeline
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+variables:
+  imageName: 'pipelines-javascript-docker'
+
+steps:
+- task: Docker@2
+  displayName: Login to ACR
+  inputs:
+    command: login
+    containerRegistry: fedten
+- task: Docker@2
+  displayName: Build and Push
+  inputs:
+    command: buildAndPush
+    containerRegistry: fedten
+    repository: $(imageName)
+    Dockerfile: scripts/docker-datacontainer/Dockerfile
+    tags: |
+      latest
+      v0.1.4
