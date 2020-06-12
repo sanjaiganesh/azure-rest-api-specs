@@ -8,4 +8,4 @@ timestamp=`date +%Y/%m/%d-%H:%M:%S`
 echo "[$timestamp] Deleting directory /usr/data/specrepo"
 rm -R /usr/data/specrepo/
 
-echo "[$timestamp] Init complete."
+echo "[$timestamp] Init completed successfully."
