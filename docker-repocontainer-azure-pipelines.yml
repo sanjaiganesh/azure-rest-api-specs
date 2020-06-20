@@ -6,7 +6,7 @@ pool:
 
 variables:
   imageName: 'pipelines-javascript-docker'
-  executionDate: $[format('v1.0.{0:MMddyyyy}', pipeline.startTime)]
+  executionDate: $[format('v1.0.{0:HHm}', pipeline.startTime)]
 
 steps:
 - task: Docker@2
