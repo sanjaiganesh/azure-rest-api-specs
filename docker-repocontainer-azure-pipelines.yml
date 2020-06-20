@@ -6,6 +6,7 @@ pool:
 
 variables:
   imageName: 'pipelines-javascript-docker'
+  executionDate: $[format('v1.0.{0:MMddyyyy}', pipeline.startTime)]
 
 steps:
 - task: Docker@2
@@ -22,4 +23,4 @@ steps:
     Dockerfile: scripts/docker-datacontainer/Dockerfile
     tags: |
       latest
-      v0.1.4
+      $(executionDate)$(Build.BuildNumber)
