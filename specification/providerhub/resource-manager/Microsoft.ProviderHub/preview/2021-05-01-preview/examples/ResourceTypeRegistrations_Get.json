@@ -48,7 +48,11 @@
           ],
           "enableAsyncOperation": false,
           "provisioningState": "Succeeded",
-          "enableThirdPartyS2S": false
+          "enableThirdPartyS2S": false,
+          "resourceGraphConfiguration":{
+            "enabled": false,
+            "apiVersion": "2019-01-01"
+          }
         },
         "name": "employees"
       }
