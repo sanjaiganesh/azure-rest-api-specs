@@ -78,7 +78,11 @@
           "enableAsyncOperation": false,
           "provisioningState": "Succeeded",
           "enableThirdPartyS2S": false,
-          "resourceDeletionPolicy": "CascadeDeleteProxyOnlyChildren"
+          "resourceDeletionPolicy": "CascadeDeleteProxyOnlyChildren",
+          "resourceGraphConfiguration":{
+            "enabled": true,
+            "apiVersion": "2019-01-01"
+          }
         },
         "name": "employees"
       }
@@ -125,7 +129,11 @@
           ],
           "enableAsyncOperation": false,
           "provisioningState": "Succeeded",
-          "enableThirdPartyS2S": false
+          "enableThirdPartyS2S": false,
+          "resourceGraphConfiguration":{
+            "enabled": true,
+            "apiVersion": "2019-01-01"
+          }
         },
         "name": "employees"
       }
